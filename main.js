@@ -110,7 +110,8 @@ client.on("message", (message) => {
   if (message.content.startsWith("!start")) {
     let modrole = message.guild.roles.find("name", "Organizadores" );
     if(message.member.roles.has(modrole.id)) {
-    message.channel.send("@here () **ATENCION TODOS EL CONTEO DEL BOT YA VA A COMENZAR!, VAYAN AL CANAL DE VOZ Sincronización**");
+    message.channel.send("!play https://www.youtube.com/watch?v=sGNrr5qUNIw");
+    message.channel.send("@here  **ATENCION TODOS EL CONTEO DEL BOT YA VA A COMENZAR!, VAYAN AL CANAL DE VOZ Sincronización**");
     }
   }
 });
