@@ -226,4 +226,4 @@ client.on("message", (message) => {
     }
   }
 });        
-  
+client.login(config.token);   
