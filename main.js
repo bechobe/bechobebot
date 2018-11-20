@@ -140,6 +140,9 @@ client.on('message', message => {
     let modrole = message.guild.roles.find("name", "Organizadores");
     if(message.member.roles.has(modrole.id)) {
     message.channel.send("@here **La próxima partida de __SOLO SCRIMS__ comienza en 30 SEGUNDOS!. Suban a la sala Sincronización**.");
+    }
+  }
+});    
         
  client.on("message", (message) => {
   if (message.content.startsWith("!s15s")) {
@@ -149,8 +152,6 @@ client.on('message', message => {
     }
   }
 });
-
-//Que buenas empanadas que hace la mama de hydr4
 
  client.on("message", (message) => {
   if (message.content.startsWith("!d5m")) {
@@ -220,6 +221,9 @@ client.on("message", (message) => {
     let modrole = message.guild.roles.find("name", "Organizadores");
     if(message.member.roles.has(modrole.id)) {
     message.channel.send("@here **La próxima partida de __DUO SCRIMS__ comienza en 30 SEGUNDOS!. Suban a la sala Sincronización**.");
+    }
+  }
+});
         
  client.on("message", (message) => {
   if (message.content.startsWith("!d15s")) {
