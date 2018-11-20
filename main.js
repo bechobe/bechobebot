@@ -112,7 +112,16 @@ client.on("message", (message) => {
   if (message.content.startsWith("!start")) {
     let modrole = message.guild.roles.find("name", "Organizadores" );
     if(message.member.roles.has(modrole.id)) {
-        if (message
+        if(message.member.VoiceChannel)
+        {
+            if (!message.guild.voiceConnection)  
+            {
+                message.member.voiceChannel.join()
+                .then(connection =>{
+                    message.reply("GO");
+                })
+                }
+                })
         
     message.channel.send("!play https://www.youtube.com/watch?v=sGNrr5qUNIw");
     };
@@ -121,6 +130,8 @@ client.on("message", (message) => {
     }
   }
 });
+
+module.exports = JoinChannelComand;
 
 client.on("message", (message) => {
   if (message.content.startsWith("!livrmk")) {
