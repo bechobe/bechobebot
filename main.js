@@ -2,6 +2,8 @@ const Discord = require("discord.js");
 const  client = new Discord.Client();
 const config = require("./config.json");
 
+bot_registry_registerGroup('music', 'Music');
+
 client.on("ready", () => {
     console.log("Estoy listo!");
  });
@@ -110,6 +112,8 @@ client.on("message", (message) => {
   if (message.content.startsWith("!start")) {
     let modrole = message.guild.roles.find("name", "Organizadores" );
     if(message.member.roles.has(modrole.id)) {
+        if (message
+        
     message.channel.send("!play https://www.youtube.com/watch?v=sGNrr5qUNIw");
     };
       {
